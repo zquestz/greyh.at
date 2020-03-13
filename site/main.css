@@ -1,0 +1,16 @@
+body {
+  margin:0 auto;
+  padding: 4em 2em;
+  text-align:center;
+  background-color:#272F32;
+  color:#DAEAEF
+}
+
+img {
+  max-width: 100%;
+  height: 250px;
+}
+
+.logo {
+  margin-bottom: 1em;
+}
