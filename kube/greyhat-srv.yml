@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: greyhat
+  namespace: default
+spec:
+  ports:
+    - port: 201
+      targetPort: 80
+  selector:
+    service: greyhat
+  type: NodePort

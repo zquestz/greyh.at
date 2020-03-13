@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: default
+  labels:
+    service: greyhat
+  name: greyhat
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      service: greyhat
+  template:
+    metadata:
+      labels:
+        service: greyhat
+    spec:
+      containers:
+      - image: zquestz/greyhat:latest
+        imagePullPolicy: Always
+        name: greyhat
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "16Mi"
+      restartPolicy: Always

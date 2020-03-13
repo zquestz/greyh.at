@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: greyhat-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+  - hosts:
+    - www.greyh.at
+    - greyh.at
+    secretName: greyhat-tls
+  backend:
+    serviceName: greyhat
+    servicePort: 201
+  rules:
+  - host: greyh.at
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: greyhat
+          servicePort: 201
+  - host: www.greyh.at
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: greyhat
+          servicePort: 201
