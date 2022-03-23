@@ -11,6 +11,8 @@ spec:
   - hosts:
     - www.greyh.at
     - greyh.at
+    - www.intrarts.com
+    - intrarts.com
     secretName: greyhat-tls
   defaultBackend:
     service:
@@ -29,6 +31,26 @@ spec:
             port:
               number: 201
   - host: www.greyh.at
+    http:
+      paths:
+      - path: /
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: greyhat
+            port:
+              number: 201
+  - host: intrarts.com
+    http:
+      paths:
+      - path: /
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: greyhat
+            port:
+              number: 201
+  - host: www.intrarts.com
     http:
       paths:
       - path: /
