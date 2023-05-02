@@ -1,5 +1,18 @@
 {
   "names": {
     "quest": "d204c9a94cde6f1819f35b567e7bbd28c83cfb989446253b8b18847c60ae27d0"
+  },
+  "relays": {
+    "d204c9a94cde6f1819f35b567e7bbd28c83cfb989446253b8b18847c60ae27d0": [
+      "wss://relay.damus.io",
+      "wss://relay.nostr.info",
+      "wss://eden.nostr.land",
+      "wss://nostr.fmt.wiz.biz",
+      "wss://offchain.pub",
+      "wss://nos.lol",
+      "wss://relay.snort.social",
+      "wss://nostr-pub.wellorder.net",
+      "wss://relay.current.fyi"
+    ]
   }
 }
