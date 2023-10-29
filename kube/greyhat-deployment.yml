@@ -16,12 +16,12 @@ spec:
         service: greyhat
     spec:
       containers:
-      - image: zquestz/greyhat:latest
-        imagePullPolicy: Always
-        name: greyhat
-        ports:
-        - containerPort: 80
-        resources:
-          requests:
-            memory: "8Mi"
+        - image: zquestz/greyhat:latest
+          imagePullPolicy: Always
+          name: greyhat
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "8Mi"
       restartPolicy: Always
